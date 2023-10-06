@@ -25,7 +25,7 @@ namespace ImportGoogleCalendar
             string calendarId = "Use Google Calendar Id";
 
             // Define a DateTime range to retrieve events
-            DateTime startDate = DateTime.Now;
+            DateTime startDate = DateTime.Now.AddDays(-10);
             DateTime endDate = DateTime.Now.AddDays(90);
 
             // Define the request to retrieve events
@@ -43,6 +43,7 @@ namespace ImportGoogleCalendar
                     EventName = appointment.Summary,
                     From = Convert.ToDateTime(appointment.Start.Date),
                     To = Convert.ToDateTime(appointment.End.Date),
+                    Background = Color.FromArgb("#FF3F51B5")
                 });
             }
         }

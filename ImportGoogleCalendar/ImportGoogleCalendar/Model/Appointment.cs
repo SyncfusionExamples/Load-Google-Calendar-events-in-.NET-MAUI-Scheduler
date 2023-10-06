@@ -43,6 +43,11 @@ namespace ImportGoogleCalendar
             set { this.eventName = value; }
         }
 
+        /// <summary>
+        /// Gets or sets the appointment background color.
+        /// </summary>
+        public Brush Background { get; set; }
+
         public event PropertyChangedEventHandler? PropertyChanged;
 
         private void OnPropertyChanged(string propertyName)
