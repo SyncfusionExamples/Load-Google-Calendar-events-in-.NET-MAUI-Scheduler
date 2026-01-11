@@ -5,7 +5,7 @@ namespace ImportGoogleCalendar
     public class Appointment : INotifyPropertyChanged
     {
         private DateTime from , to;
-        private string eventName;
+        private string eventName = string.Empty;
 
         /// <summary>
         /// Gets or sets the value to display the start date.
@@ -46,7 +46,7 @@ namespace ImportGoogleCalendar
         /// <summary>
         /// Gets or sets the appointment background color.
         /// </summary>
-        public Brush Background { get; set; }
+        public Brush? Background { get; set; }
 
         public event PropertyChangedEventHandler? PropertyChanged;
 

@@ -4,7 +4,8 @@
              xmlns:local ="clr-namespace:ImportGoogleCalendar"
              xmlns:scheduler="clr-namespace:Syncfusion.Maui.Scheduler;assembly=Syncfusion.Maui.Scheduler"
              x:Class="ImportGoogleCalendar.MainPage">
-    <scheduler:SfScheduler  View="Month" 
+    <scheduler:SfScheduler  View="Month"
+                            x:DataType="local:SchedulerViewModel"
                            AllowedViews="Day,Week,WorkWeek,Month,TimelineDay,TimelineWeek,TimelineWorkWeek,TimelineMonth,Agenda"
                            AppointmentsSource="{Binding Appointments}">
         <scheduler:SfScheduler.AppointmentMapping>
